@@ -32,6 +32,8 @@ player2.classList.remove('player--winner');
 document.querySelectorAll('.win').forEach(el => el.classList.add('hidden'));
 document.querySelectorAll('.current').forEach(el => el.classList.remove('hidden'));
 document.querySelectorAll('.player').forEach(el => el.classList.remove('player--winner'));
+document.querySelectorAll('.btn--roll').forEach(el => el.classList.remove('hidden'));
+document.querySelectorAll('.btn--hold').forEach(el => el.classList.remove('hidden'));
 
 
 });
@@ -40,6 +42,8 @@ function checkWinner() {
     if (Number(current0.textContent) >= 100 || Number(score0.textContent) >= 100) {  
         player1.classList.add('player--winner');
         document.querySelectorAll('.current').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('.btn--roll').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('.btn--hold').forEach(el => el.classList.add('hidden'));
         // [0]перший елемент у списку
         document.querySelectorAll('.win')[0].classList.remove('hidden');
         
@@ -47,6 +51,8 @@ function checkWinner() {
     else if (Number(current1.textContent) >= 100 || Number(score1.textContent) >= 100) {
         player2.classList.add('player--winner');
         document.querySelectorAll('.current').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('.btn--roll').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('.btn--hold').forEach(el => el.classList.add('hidden'));
         // [1] другий елемент у списку
         document.querySelectorAll('.win')[1].classList.remove('hidden');
     }
