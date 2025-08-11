@@ -99,6 +99,7 @@ if (randomNumber == 1) {
         player1.classList.remove('player--active');
         player2.classList.add('player--active');
         current0.textContent = 0;
+        value = 0;
       } else if (randomNumber === 2) {
         document.querySelector('.dice').src = './dice2.png';
         value += 2; // додаємо 1
@@ -127,6 +128,7 @@ if (randomNumber == 1) {
         player2.classList.remove('player--active');
         player1.classList.add('player--active');
         current1.textContent = 0;
+        value2 = 0;
       } else if (randomNumber === 2) {
         document.querySelector('.dice').src = './dice2.png';
         value2 += 2; // додаємо 1
